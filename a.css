@@ -9,6 +9,9 @@ a{
     padding: 0;
     margin: 0;
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
 hr{
     border: none;
     height: 0;
@@ -31,7 +34,7 @@ hr{
     float: left;
     font-size: 24px;
     font-weight: bold;
-    padding-top: 1px;
+    padding-top: 2px;
 }
 .topNavBar .logo .rs{
     color: #E8676B;
@@ -42,7 +45,7 @@ hr{
 }
 .topNavBar nav{
     float: right;
-    padding-top: 8px;
+    padding-top: 3px;
     padding-bottom: 2px;
 }
 .topNavBar nav>ul{
@@ -58,6 +61,7 @@ hr{
 .topNavBar nav>ul>li>a{
     font-size: 12px;
     color: #CCCED1;
+    padding: 7px 0;
     border-bottom: solid 3px transparent;
     border-top: solid 3px transparent;
     font-weight:bold;
@@ -75,6 +79,10 @@ hr{
 .banner .mask{
     height: 515px;
     background-color: rgba(0,0,0,0.8);
+}
+main{
+
+    margin-top: -345px;
 }
 .userCard{
     background: white;
