@@ -153,6 +153,7 @@ body > main{
     width: 45px;
     padding: 10px 0;
     margin: 20px 16px;
+    transition: all 0.2s;
 }
 .userCard>footer.media a:hover{
     background: #D05C60;
