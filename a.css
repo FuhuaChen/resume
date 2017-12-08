@@ -1,116 +1,131 @@
-body{
+body {
     background: #EFEFEF;
 }
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-*{
+* {
     padding: 0;
     margin: 0;
 }
-ol,ul{
+ol, ul {
     list-style: none;
 }
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-hr{
+hr {
     border: none;
     height: 0;
     border-top: 1px solid #DEDEDE;
 }
-.clearfix::after{
+.site-welcome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #888;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1;
+}
+.site-welcome.active{
+    display: flex;
+}
+.clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
-.topNavBar-inner{
+.topNavBar-inner {
     padding: 0 16px;
 }
-.topNavBar{
+.topNavBar {
     padding: 24px 0;
     position: fixed;
     width: 100%;
 }
-.topNavBar .logo{
+.topNavBar .logo {
     float: left;
     font-size: 24px;
     font-weight: bold;
     padding-top: 2px;
 }
-.topNavBar .logo .rs{
+.topNavBar .logo .rs {
     color: #E8676B;
     margin-right: 4px;
 }
-.topNavBar .logo .card{
+.topNavBar .logo .card {
     color: #9A9DA2;
 }
-.topNavBar nav{
+.topNavBar nav {
     float: right;
     padding-top: 3px;
     padding-bottom: 2px;
 }
-.topNavBar nav>ul{
+.topNavBar nav > ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.topNavBar nav>ul>li{
+.topNavBar nav > ul > li {
     float: left;
     margin-left: 17px;
     margin-right: 17px;
 }
-.topNavBar nav>ul>li>a{
+.topNavBar nav > ul > li > a {
     font-size: 12px;
     color: #CCCED1;
     padding: 7px 0;
     border-bottom: solid 3px transparent;
     border-top: solid 3px transparent;
-    font-weight:bold;
+    font-weight: bold;
     display: block;
 }
-.topNavBar nav>ul>li>a:hover{
+.topNavBar nav > ul > li > a:hover {
     border-bottom: solid 3px #E8676B;
 }
-.banner{
+.banner {
     background: url("./img/rs-cover.jpg");
     height: 515px;
     background-size: cover;
     background-position: center center;
 }
-.banner .mask{
+.banner .mask {
     height: 515px;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
-body > main{
+body > main {
     margin-top: -345px;
 }
-.userCard{
+.userCard {
     background: white;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
 }
-.userCard .pictureAndtext{
+.userCard .pictureAndtext {
     padding: 55px 50px 40px;
 }
-.userCard .picture{
+.userCard .picture {
     float: left;
 }
-.userCard .text{
+.userCard .text {
     float: left;
     margin-left: 65px;
     width: 470px;
 }
-.userCard .text h1{
+.userCard .text h1 {
     margin-bottom: 8px;
 }
-.userCard .text hr{
+.userCard .text hr {
     margin: 20px 0;
 }
-.userCard .text .welcome{
+.userCard .text .welcome {
     display: inline-block;
     background: #E8676B;
     color: white;
@@ -119,34 +134,34 @@ body > main{
     position: relative;
     margin-bottom: 26px;
 }
-.userCard .text .welcome .triangle{
+.userCard .text .welcome .triangle {
     display: block;
     border: 8px solid transparent;
     height: 0;
-    border-left-color:#E8676B;
+    border-left-color: #E8676B;
     border-top-width: 0;
     position: absolute;
     top: 100%;
     left: 6px;
 }
 .userCard dl dt,
-.userCard dl dd{
+.userCard dl dd {
     float: left;
     padding: 6px 0;
 }
-.userCard dl dt{
+.userCard dl dt {
     width: 30%;
     font-weight: bold;
 }
-.userCard dl dd{
+.userCard dl dd {
     width: 70%;
     color: #9da0a7;
 }
-.userCard>footer.media{
+.userCard > footer.media {
     background-color: #E8676B;
     text-align: center;
 }
-.userCard>footer.media a{
+.userCard > footer.media a {
     display: inline-block;
     border-radius: 50%;
     line-height: 25px;
@@ -155,16 +170,16 @@ body > main{
     margin: 20px 16px;
     transition: all 0.2s;
 }
-.userCard>footer.media a:hover{
+.userCard > footer.media a:hover {
     background: #D05C60;
 }
-.userCard>footer svg{
+.userCard > footer svg {
     width: 25px;
     height: 25px;
     fill: white;
     vertical-align: top;
 }
-body > main .downloadResume{
+body > main .downloadResume {
     border: 1px solid #CDCFD1;
     font-size: 15px;
     line-height: 1.1;
@@ -177,13 +192,13 @@ body > main .downloadResume{
     margin: 36px 0 30px;
     transition: box-shadow 0.3s;
 }
-.download-wrapper{
+.download-wrapper {
     text-align: center;
 }
-body > main .downloadResume:hover{
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+body > main .downloadResume:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
-.selfIntroduction{
+.selfIntroduction {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
@@ -192,100 +207,100 @@ body > main .downloadResume:hover{
     font-family: 楷体;
 }
 section.skills,
-section.portfolio{
+section.portfolio {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
 }
 section.skills > h2,
-section.portfolio > h2{
+section.portfolio > h2 {
     text-align: center;
     color: #3d4451;
     font-size: 34px;
     line-height: 1.2;
     font-weight: 600;
 }
-section.skills h3{
+section.skills h3 {
     font-size: 14px;
     line-height: 1.1;
     padding-right: 40px;
 }
-section.skills > ol{
+section.skills > ol {
     background: white;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
     padding: 44px 50px 10px;
     margin-top: 32px;
 }
-section.skills > ol > li{
+section.skills > ol > li {
     float: left;
     width: 48%;
 }
-section.skills > ol > li:nth-child(even){
+section.skills > ol > li:nth-child(even) {
     float: right;
 }
-section.skills .progressBar{
+section.skills .progressBar {
     height: 5px;
     background: #FAE0E0;
     border-radius: 2px;
     margin: 6px 0 40px;
 }
-section.skills .progress{
+section.skills .progress {
     height: 100%;
     width: 50%;
     background: #E8676B;
     border-radius: 2px;
 }
-section.portfolio{
+section.portfolio {
     text-align: center;
 }
-section.portfolio > nav{
+section.portfolio > nav {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
     margin-top: 30px;
 }
-section.portfolio > nav >ol{
+section.portfolio > nav > ol {
     display: inline-block;
     vertical-align: top;
 }
-section.portfolio > nav > ol > li{
+section.portfolio > nav > ol > li {
     float: left;
     margin-left: 42px;
 }
-section.portfolio > nav > ol > li:first-child{
+section.portfolio > nav > ol > li:first-child {
     margin-left: 0;
 }
-section.portfolio > nav .bar{
+section.portfolio > nav .bar {
     margin-top: 10px;
     margin-bottom: 30px;
     height: 5px;
     background: white;
     border-radius: 2px;
 }
-section.portfolio > nav .bar.state-1 .bar-inner{
+section.portfolio > nav .bar.state-1 .bar-inner {
     width: 42px;
 }
-section.portfolio > nav .bar.state-2 .bar-inner{
+section.portfolio > nav .bar.state-2 .bar-inner {
     width: 50px;
     margin-left: 68px;
 }
-section.portfolio > nav .bar.state-3 .bar-inner{
+section.portfolio > nav .bar.state-3 .bar-inner {
     width: 102px;
     margin-left: 140px;
 }
-section.portfolio > nav .bar-inner{
+section.portfolio > nav .bar-inner {
     height: 100%;
     background: #D05C60;
     border-radius: 2px;
     transition: all 0.3s;
 }
-section.portfolio .works{
+section.portfolio .works {
     position: relative;
     height: 597px;
     margin-bottom: 100px;
 }
 section.portfolio .works .big,
-section.portfolio .works .small{
+section.portfolio .works .small {
     position: absolute;
 }
