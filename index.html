@@ -51,7 +51,7 @@
 <div id="siteWelcome" class="site-welcome active">
     <div class="loading"></div>
 </div>
-<div class="topNavBar">
+<div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
         <a href="#" class="logo">
             <span class="rs">RS</span><span class="card">card</span>
@@ -191,10 +191,10 @@
 <script>
     portfolio1.onclick = function () {
         portfoliobar.className = 'bar state-1'
-    }
+    };
     portfolio2.onclick = function () {
         portfoliobar.className = 'bar state-2'
-    }
+    };
     portfolio3.onclick = function () {
         portfoliobar.className = 'bar state-3'
     }
@@ -202,7 +202,15 @@
 <script>
     setTimeout(function () {
         siteWelcome.classList.remove('active')
-    },2000)
+    }, 2000);
+
+    window.onscroll = function () {
+        if(window.scrollY > 0){
+            topNavBar.classList.add('sticky')
+        }else {
+            topNavBar.classList.remove('sticky')
+        }
+    }
 </script>
 </body>
 </html>
