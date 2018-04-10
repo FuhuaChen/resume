@@ -188,6 +188,7 @@
         </div>
     </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 <script>
     portfolio1.onclick = function () {
         portfoliobar.className = 'bar state-1'
@@ -211,15 +212,34 @@
             topNavBar.classList.remove('sticky')
         }
     }
+    function animate(time) {
+        requestAnimationFrame(animate)
+        TWEEN.update(time)
+    }
+    requestAnimationFrame(animate)
+
     let aTags = document.querySelectorAll('nav > ul > li >a')
     for(let i = 0;i<aTags.length;i++){
         aTags[i].onclick = function (x) {
             x.preventDefault()
             let a = x.currentTarget
-            herf = a.getAttribute('href')
-            element = document.querySelector(herf)
+            href = a.getAttribute('href')
+            element = document.querySelector(href)
             let top = element.offsetTop
-            window.scrollTo(0,top-80)
+
+            let currentTop = window.scrollY
+            let targetTop = top - 80
+            let coords = {y: currentTop}
+            let s = targetTop - currentTop
+            let t = Math.abs((s/100)*300)
+            if(t > 500){t = 500}
+            let tween = new TWEEN.Tween(coords)
+                .to({y: targetTop}, t)
+                .easing(TWEEN.Easing.Quadratic.InOut)
+                .onUpdate(function () {
+                    window.scrollTo(0, coords.y)
+                })
+                .start()
         }
     }
 </script>
