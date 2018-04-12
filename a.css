@@ -20,11 +20,19 @@ hr {
     height: 0;
     border-top: 1px solid #DEDEDE;
 }
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+[data-x].offset{
+    transform: translateY(50px);
+    opacity: 0;
+}
 .site-welcome{
     position: fixed;
     top: 0;
     left: 0;
-    background: #888;
+    background: #EFEFEF;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -93,9 +101,26 @@ hr {
     border-top: solid 3px transparent;
     font-weight: bold;
     display: block;
+    position: relative;
 }
-.topNavBar nav > ul > li > a:hover {
-    border-bottom: solid 3px #E8676B;
+.topNavBar nav > ul > li.highlight > a::after,
+.topNavBar nav > ul > li > a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #E8676B;
+    margin-top: 7px;
+    animation: slide 0.3s;
+}
+@keyframes slide{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
 .banner {
     background: url("./img/rs-cover.jpg");
@@ -253,12 +278,17 @@ section.skills .progressBar {
     background: #FAE0E0;
     border-radius: 2px;
     margin: 6px 0 40px;
+    overflow: hidden;
 }
 section.skills .progress {
     height: 100%;
     width: 50%;
     background: #E8676B;
     border-radius: 2px;
+    transition: all 1s;
+}
+section.skills.offset .progress {
+    transform: translateX(-100%);
 }
 section.portfolio {
     text-align: center;
