@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./vendors/swiper.min.css">
     <link rel="stylesheet" href="./a.css">
     <title>陈富华的个人简历</title>
     <script src="//at.alicdn.com/t/font_465590_f87qo0qxts0v0a4i.js"></script>
@@ -166,29 +167,30 @@
 </section>
 <section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
-    <nav>
-        <ol class="clearfix">
-            <li id="portfolio1">所有</li>
-            <li id="portfolio2">框架</li>
-            <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfoliobar" class="bar state-1">
-            <div class="bar-inner"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <img class="swiper-slide" src="./works/navigation.jpg">
+            <img class="swiper-slide" src="./works/canvas.jpg">
         </div>
-    </nav>
-    <div class="works">
-        <div class="big" style="top: 0;left:0">
-            <img src="./img/1.jpg" alt="作品1">
-        </div>
-        <div class="small" style="top: 0;left: 647px">
-            <img src="./img/2.jpg" alt="作品2">
-        </div>
-        <div class="small" style="top: 312px;left:647px">
-            <img src="./img/3.jpg" alt="作品3">
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+<script src="./vendors/swiper.min.js"></script>
+<script>
+    let mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    })
+</script>
 <script>
     portfolio1.onclick = function () {
         portfoliobar.className = 'bar state-1'

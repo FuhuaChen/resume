@@ -28,6 +28,10 @@ hr {
     transform: translateY(50px);
     opacity: 0;
 }
+.swiper-container {
+    width: 940px;
+    height: 470px;
+}
 .site-welcome{
     position: fixed;
     top: 0;
@@ -292,54 +296,15 @@ section.skills.offset .progress {
 }
 section.portfolio {
     text-align: center;
-}
-section.portfolio > nav {
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
-    margin-top: 30px;
-}
-section.portfolio > nav > ol {
-    display: inline-block;
-    vertical-align: top;
-}
-section.portfolio > nav > ol > li {
-    float: left;
-    margin-left: 42px;
-}
-section.portfolio > nav > ol > li:first-child {
-    margin-left: 0;
-}
-section.portfolio > nav .bar {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    height: 5px;
-    background: white;
-    border-radius: 2px;
-}
-section.portfolio > nav .bar.state-1 .bar-inner {
-    width: 42px;
-}
-section.portfolio > nav .bar.state-2 .bar-inner {
-    width: 50px;
-    margin-left: 68px;
-}
-section.portfolio > nav .bar.state-3 .bar-inner {
-    width: 102px;
-    margin-left: 140px;
-}
-section.portfolio > nav .bar-inner {
-    height: 100%;
-    background: #D05C60;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-section.portfolio .works {
-    position: relative;
-    height: 597px;
     margin-bottom: 100px;
 }
-section.portfolio .works .big,
-section.portfolio .works .small {
-    position: absolute;
+section.portfolio h2 {
+    margin-bottom: 32px;
+}
+section.portfolio .swiper-button-prev,
+section.portfolio .swiper-button-next{
+    background-color: rgba(0,0,0,0.6);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
 }
