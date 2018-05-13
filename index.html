@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./vendors/swiper.min.css">
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="main.css">
     <title>陈富华的个人简历</title>
     <script src="//at.alicdn.com/t/font_465590_f87qo0qxts0v0a4i.js"></script>
 </head>
@@ -14,14 +14,14 @@
 <div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
         <a href="#" class="logo">
-            <span class="rs">RS</span><span class="card">card</span>
+            <span class="rs">C</span><span class="card">FH</span>
         </a>
         <nav>
             <ul class="clearfix">
                 <li><a href="#siteAbout">关于</a></li>
                 <li><a href="#siteSkills">技能</a></li>
                 <li><a href="#siteWorks">作品</a></li>
-                <li><a href="#">博客</a></li>
+                <li><a href="#message">留言板</a></li>
                 <li><a href="#">日历</a></li>
                 <li><a href="#">联系方式</a></li>
                 <li><a href="#">其他</a></li>
@@ -136,12 +136,23 @@
         <div class="swiper-button-next"></div>
     </div>
 </section>
+<section data-x class="message" id="message">
+    <h2>留言板</h2>
+    <form action="" id="postMessageForm">
+        <label>姓名<input type="text" name="name"></label>
+        <label>内容<input type="text" name="content"></label>
+        <input type="submit">
+    </form>
+    <ol></ol>
+</section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 <script src="./vendors/swiper.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.6.8/av-min.js"></script>
 <script src="./js/init-swiper.js"></script>
 <script src="./js/removeLoading.js"></script>
 <script src="./js/slide-up.js"></script>
 <script src="./js/smoothly-navigation.js"></script>
 <script src="./js/sticky-topNavBar.js"></script>
+<script src="./js/message.js"></script>
 </body>
 </html>

@@ -116,7 +116,7 @@ hr {
 }
 .topNavBar .logo .rs {
     color: #E8676B;
-    margin-right: 4px;
+    margin-right: 2px;
 }
 .topNavBar .logo .card {
     color: #9A9DA2;
@@ -284,6 +284,7 @@ body > main .downloadResume:hover {
     font-family: 楷体;
 }
 section.skills,
+section.message,
 section.portfolio {
     max-width: 940px;
     margin-left: auto;
@@ -291,6 +292,7 @@ section.portfolio {
     margin-top: 75px;
 }
 section.skills > h2,
+section.message > h2,
 section.portfolio > h2 {
     text-align: center;
     color: #3d4451;
@@ -337,6 +339,10 @@ section.portfolio {
     text-align: center;
     margin-bottom: 100px;
 }
+section.portfolio .swiper-container{
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
 section.portfolio h2 {
     margin-bottom: 32px;
 }
@@ -346,4 +352,15 @@ section.portfolio .swiper-button-next{
     width: 55px;
     height: 55px;
     border-radius: 50%;
+}
+
+section.message > form{
+    padding:44px 0;
+    text-align: center;
+}
+
+section.message > ol > li{
+    padding: 16px;
+    margin: 10px auto;
+    border-top: solid 2px #ddd;
 }
